@@ -8,4 +8,4 @@ A list of front-end projects completed as part of Free Code Camp's front-end dev
 
 ### Intermediate Front End Development Projects
 3. [Random Quote Machine](http://codepen.io/nimalen/full/bBqGNe/ "Random Quote Machine") [(source code)](./random_quote_machine/)
-4. [Local Weather App](https://codepen.io/nimalen/full/YpQyJb "Local Weather App"), [(source code)](./local_weather_app/)
+4. [Local Weather App](http://codepen.io/nimalen/full/YpQyJb "Local Weather App"), [(source code)](./local_weather_app/)
