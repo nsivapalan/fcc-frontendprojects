@@ -1,4 +1,4 @@
-var source = "https://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?";
+var source = "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?";
 
 $(document).ready(function() {
 	generateQuote(); //load quote immediately
