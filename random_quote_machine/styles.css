@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran');
+
+* {
+  font-family: Catamaran;
+}
+
+#background {
+  background: #fffc56;
+  background: linear-gradient(#fffc56, #ff9900);  
+  background: -webkit-linear-gradient(#fffc56, #ff9900);
+  background: -moz-linear-gradient(#fffc56, #ff9900);
+  background: -o-linear-gradient(#fffc56, #ff9900);  
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#title {
+  color: #ea4646;
+  margin-top: 50px;
+}
+
+#quote {
+  font-size: 24px;
+}
+
+#author {
+  font-size: 18px;
+  font-style: italic;
+}
+
+#credit {
+  padding: 10px;
+}
