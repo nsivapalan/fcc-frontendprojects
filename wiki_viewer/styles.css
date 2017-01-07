@@ -1,0 +1,18 @@
+input[type=text] {
+  margin: auto;
+  width: 50%;
+  transition: width 0.5s ease-in-out;
+  -webkit-transition: width 0.5s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 75%;
+  background: #efefef;
+}
+
+::-webkit-input-placeholder {
+	text-align:center; 
+}
+input:-moz-placeholder {
+	text-align:center; 
+}
