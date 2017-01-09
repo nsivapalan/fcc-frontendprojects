@@ -1,11 +1,10 @@
 $(document).ready(function() {
 
-	// var source = "http://en.wikipedia.org/w/api.php?action=opensearch&format=json&suggest=1&callback=?&search="
-	var source = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=10&callback=?&search=butter";
+	var source = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&limit=10&callback=?&search=cricket";
 	// var source = "https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&callback=?&srsearch="
 	var searchItem = "";
 
-	$("#searchexample").on("click", getResults(source));
+	$("#find").click(getResults(source));
 
 	// $("#find").on("click", function() {
 	//   searchItem = document.getElementById("searchItem").value;
@@ -28,8 +27,8 @@ $(document).ready(function() {
 
 	function addResult(title, des, link) {
 
-		$("#searchResults").append("<li>" + "<a target='_blank' href='" + link + "'>" + title + "</a>"
-		   + "<br>" + des + "<br>" + link + "</li>");
+		$("#searchResults").append("<li>" + "<a target='_blank' href='" + link + "'>" + "<h3>" + title
+		+ "</h3>" + "</a>" + "<br>" + des + "</li>");
 
 	}
 
