@@ -3,18 +3,18 @@
 <head>
 	<title>Wiki Viewer</title>
 	<link rel="stylesheet" type="text/css" href="./styles.css">
-	<script async defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<script async defer src="./script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="./script.js"></script>
 
 	<!-- fontawesome -->
-	<script async defer src="https://use.fontawesome.com/c4713b75d1.js"></script>
+	<script defer src="https://use.fontawesome.com/c4713b75d1.js"></script>
 
 	<!-- Bootstrap -->
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 	<!-- Latest compiled and minified JavaScript -->
-	<script async defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -26,9 +26,11 @@
       <input type="text" name="search" id="searchItem" placeholder="Search for a Wiki article..." />
       <button type="submit" id="find">Search</button>
     </form>
-    <ul>
+    <ul id="searchResults">
     </ul>
   </div>
+
+  <button id="searchexample">searchexample</div>
   
 </div>
 
