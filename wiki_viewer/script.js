@@ -6,6 +6,7 @@ $(document).ready(function() {
 
 	$("#find").on("click", function() {
 		source = original;
+		$("#searchResults").css("display", "none");
 		$("#searchResults").html("");
 		if ($("#searchItem").val().length === 0) {
 			alert("Please enter a value!");
@@ -23,11 +24,13 @@ $(document).ready(function() {
 	    console.log(data);
 	    if (data[1].length === 0) {
 	    	noResults();
-	    } else {
-		    	for (var i = 0; i < data[1].length; i++) {
-	    			addResult(data[1][i], data[2][i], data[3][i]);
-	    		}
-	    	}
+	    } 
+	    else {
+	    	for (var i = 0; i < data[1].length; i++) {
+    			addResult(data[1][i], data[2][i], data[3][i]);
+    		}
+    	}
+    	$("#searchResults").fadeIn(500);
 	  });
 	}
 
