@@ -19,14 +19,25 @@
 <body>
 
 <div class="container-fluid">
-  <h1 class="text-center">Wiki Viewer</h1>
-  <h2 class="text-center">In progress!</h2>
+
   <div class="row">
-  	<div class="col-md-8 col-md-offset-2">
-	    <form action="">
-    		<input type="text" name="search" id="searchItem" placeholder="Search for a Wiki article..." />
-    		<button type="submit" id="find">Search</button>
-  		</form>
+  	<div class="col-md-8 col-md-offset-2 col-xs-12">
+
+		  <h1 class="text-center">Wiki Viewer</h1>
+		  <p class="lead text-center">Search for anything on Wikipedia and get the top results.</p>
+		  <p class="lead text-center">
+		  	<a target="_blank" href="https://en.wikipedia.org/wiki/Special:Random">Random article</a>
+	  	</p>
+
+	    <div class="form-group">
+    		<input class="form-control input-lg" type="text" name="search" id="searchItem" placeholder="Search for a Wiki article..." /> 
+    		<span><i class="fa fa-search fa-3x" id="find"></i></span>
+  		</div	>
+  	</div>
+  </div>
+
+  <div class="row">
+  	<div class="col-md-8 col-md-offset-2 col-xs-12">
   		<ul id="searchResults">
   		</ul>
   	</div>
