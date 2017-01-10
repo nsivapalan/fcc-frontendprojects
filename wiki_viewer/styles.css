@@ -1,17 +1,11 @@
 input[type=text] {
-	width: 90%;
+	display: inline;
+	width: 88%;
 }
 
 input[type=text]:focus {
   background: #efefef;
 }
-
-/*::-webkit-input-placeholder {
-	text-align:center; 
-}
-input:-moz-placeholder {
-	text-align:center; 
-}*/
 
 li {
 	margin: 0;
@@ -20,4 +14,13 @@ li {
 	border-left: 5px solid yellow;
 	margin-top: 10px;
 	padding: 10px;
+}
+
+a:hover {
+	background: lightblue;
+	text-decoration: none !important;
+}
+
+#find {
+	margin-left: 10px;
 }
