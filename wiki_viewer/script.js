@@ -40,5 +40,9 @@ $(document).ready(function() {
 		$("#searchResults").append("<li><h4>No results. Please try again!</h4></li>");		
 	}
 
+	$('#top').click(function() {
+    $('html, body').animate({scrollTop: '0px'});
+  });
+
 });
 
