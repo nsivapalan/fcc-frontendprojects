@@ -40,7 +40,7 @@ $(document).ready(function() {
 	}
 
 	function noResults() {
-		$("#searchResults").append("<li><h4>No results. Please try again!</h4></li>");		
+		$("#searchResults").append("<li class='result'><h4>No results. Please try again!</h4></li>");		
 	}
 
 	$('#top').click(function() {
