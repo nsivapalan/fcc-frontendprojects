@@ -1,3 +1,7 @@
+* {
+	font-family: 'Work Sans', sans-serif;
+}
+
 input[type=text] {
 	display: inline;
 	width: 88%;
@@ -19,12 +23,14 @@ li {
 	border-left: 5px solid green;
 	margin-top: 10px;
 	padding: 10px;
-	transition: margin 2s;
+	transition: margin 0.5s;
+	-webkit-transition: margin 0.5s;
 }
 
 li:hover {
 	margin: 20px;
-	transition: margin 2s;
+	transition: margin 0.5s;
+	-webkit-transition: margin 0.5s;
 }
 
 a:hover {
