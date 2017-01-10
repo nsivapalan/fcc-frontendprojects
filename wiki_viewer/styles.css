@@ -8,36 +8,38 @@ input[type=text] {
 	border-radius: 0;
 }
 
-input[type=text]:focus {
-  background: #efefef;
+	input[type=text]:focus {
+	  background: #efefef;
+	}
+
+a:hover {
+	border-bottom: 3px solid #fcb28f;
+	text-decoration: none !important;
 }
 
 ul {
 	padding: 0;
 }
 
-li {
+.result {
 	margin: 0;
+	color: white;
 	list-style-type: none;
-	background: lightblue;
-	border-left: 5px solid green;
+	background: #3a96ff;
+	border-left: 5px solid #fcb28f;
 	margin-top: 10px;
 	padding: 10px;
 	transition: margin 0.5s;
 	-webkit-transition: margin 0.5s;
 }
 
-li:hover {
+	.result:hover {
 	margin: 20px;
 	transition: margin 0.5s;
 	-webkit-transition: margin 0.5s;
-}
-
-a:hover {
-	background: lightblue;
-	text-decoration: none !important;
-}
+	}
 
 #find {
-	background: lightgreen;
+	color: white;
+	background: #3a96ff;
 }

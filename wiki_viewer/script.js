@@ -35,7 +35,7 @@ $(document).ready(function() {
 	}
 
 	function addResult(title, des, link) {
-		$("#searchResults").append("<a target='_blank' href='" + link + "'><li>" + "<h4>" + title
+		$("#searchResults").append("<a target='_blank' href='" + link + "'><li class='result'>" + "<h4>" + title
 		+ "</h4>" + des + "</li></a>");
 	}
 
