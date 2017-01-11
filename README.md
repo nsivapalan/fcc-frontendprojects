@@ -7,5 +7,6 @@ A list of front-end projects completed as part of Free Code Camp's front-end dev
 2. [Personal Portfolio](http://www.nimalen.com/fcc-frontendprojects/personal_portfolio/index.html "Personal Portfolio") [(source code)](./personal_portfolio/)
 
 ### Intermediate Front End Development Projects
-3. [Random Quote Machine](http://codepen.io/nimalen/full/bBqGNe/ "Random Quote Machine") [(source code)](./random_quote_machine/)
-4. [Local Weather App](http://codepen.io/nimalen/full/YpQyJb "Local Weather App"), [(source code)](./local_weather_app/)
+1. [Random Quote Machine](http://codepen.io/nimalen/full/bBqGNe/ "Random Quote Machine") [(source code)](./random_quote_machine/)
+2. [Local Weather App](http://codepen.io/nimalen/full/YpQyJb "Local Weather App"), [(source code)](./local_weather_app/)
+3. [Wikipedia Viewer](http://nimalen.com/fcc-frontendprojects/wiki_viewer/ "Wikipedia Viewer"), [(source code)](./wiki_viewer/)
