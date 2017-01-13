@@ -1,0 +1,11 @@
+li {
+	margin: 10px;
+	padding: 10px;
+	list-style-type: none;
+	border: 3px solid black;
+}
+
+.pic {
+	border-radius: 50%;
+	height: 50px;
+}
