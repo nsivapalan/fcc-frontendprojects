@@ -17,3 +17,11 @@ a:hover {
 .online {
 	background: lightgreen;
 }
+
+.offline {
+	background: #ff6d6b;
+}
+
+.inactive {
+	background: #efefef;
+}
