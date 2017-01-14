@@ -33,8 +33,8 @@ $(document).ready(function() {
 			console.log(data);
 			if (data["stream"] !== null) {
 				$("#results").append("<a target='_blank' align='left' href='" + data["stream"]["channel"]["url"] + "''>" 
-					+ "<li><img class='pic' src='" + data["stream"]["channel"]["logo"] + "' />" 
-					+ data["stream"]["channel"]['display_name'] + "<br><small>" + data["stream"]["channel"]['status'] + "</small></li></a><br>");
+					+ "<li class='online'><img class='pic' src='" + data["stream"]["channel"]["logo"] + "' />" 
+					+ "<h2>" + data["stream"]["channel"]['display_name'] + "</h2>" + "<p><small>" + data["stream"]["channel"]['status'] + "</p></li></a><br>");
 			}
 		});
 	}

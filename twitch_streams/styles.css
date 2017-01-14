@@ -1,11 +1,19 @@
 li {
-	margin: 10px;
+	margin: 5px;
 	padding: 10px;
 	list-style-type: none;
 	border: 3px solid black;
 }
 
+a:hover {
+	text-decoration: none !important;
+}
+
 .pic {
 	border-radius: 50%;
 	height: 50px;
+}
+
+.online {
+	background: lightgreen;
 }
