@@ -10,3 +10,4 @@ A list of front-end projects completed as part of Free Code Camp's front-end dev
 1. [Random Quote Machine](http://codepen.io/nimalen/full/bBqGNe/ "Random Quote Machine") [(source code)](./random_quote_machine/)
 2. [Local Weather App](http://codepen.io/nimalen/full/YpQyJb "Local Weather App"), [(source code)](./local_weather_app/)
 3. [Wikipedia Viewer](http://nimalen.com/fcc-frontendprojects/wiki_viewer/ "Wikipedia Viewer"), [(source code)](./wiki_viewer/)
+4. [Twitch Streams](http://nimalen.com/fcc-frontendprojects/twitch_streams/ "Twitch Streams"), [(source code)](./twitch_streams/)
