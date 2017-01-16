@@ -22,21 +22,21 @@ $(document).ready(function() {
 
 
 	$("#on").on("click", function() {
-		showAll();
-		$(".offline").css("display", "none");
-		$(".inactive").css("display", "none");
+		$(".online").fadeIn();
+		$(".offline").fadeOut();
+		$(".inactive").fadeOut();
 	});
 
 	$("#off").on("click", function() {
-		showAll();
-		$(".online").css("display", "none");
-		$(".inactive").css("display", "none");
+		$(".offline").fadeIn();
+		$(".online").fadeOut();
+		$(".inactive").fadeOut();
 	});
 
 	$("#na").on("click", function() {
-		showAll();
-		$(".online").css("display", "none");
-		$(".offline").css("display", "none");
+		$(".inactive").fadeIn();
+		$(".online").fadeOut();
+		$(".offline").fadeOut();
 	});
 
 	$("#all").on("click", function() {
@@ -65,9 +65,9 @@ $(document).ready(function() {
 	Show all channels - online, offline, and inactive.
 	*/
 	function showAll() {
-		$(".online").css("display", "");
-		$(".offline").css("display", "");
-		$(".inactive").css("display", "");
+		$(".online").fadeIn();
+		$(".offline").fadeIn();
+		$(".inactive").fadeIn();
 	}
 
 	/*
