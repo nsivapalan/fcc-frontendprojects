@@ -16,25 +16,10 @@ $(document).ready(function() {
 	var channelSource = "https://api.twitch.tv/kraken/channels/";
 	var channelChange = "?client_id=" + headers.client_id  + "&accept" + headers.accept;
 
-
 	var original = "https://api.twitch.tv/kraken/streams/"
 	var source = "https://api.twitch.tv/kraken/streams/";
 	var change = "?client_id=" + headers.client_id  + "&accept" + headers.accept;
 
-	/*Main function*/
-	function main() {
-
-		for (var i = 0; i < usernames.length; i++) {
-			name = usernames[i];
-			changeLiveSource(name);
-			getLiveInfo();
-			if (!isLive) {
-				changeChannelSource(name);
-				getChannelInfo();
-			}
-		}
-
-	}
 
 	$("#on").on("click", function() {
 		showAll();
@@ -54,29 +39,55 @@ $(document).ready(function() {
 		$(".offline").css("display", "none");
 	});
 
-
 	$("#all").on("click", function() {
 		showAll();
 	});
 
+
+	/*
+	Main function, called once, that executes ajax functions to display all channels.
+	*/
+	function main() {
+
+		for (var i = 0; i < usernames.length; i++) {
+			name = usernames[i];
+			changeLiveSource(name);
+			getLiveInfo();
+			if (!isLive) {
+				changeChannelSource(name);
+				getChannelInfo();
+			}
+		}
+
+	}
+
+	/*
+	Show all channels - online, offline, and inactive.
+	*/
 	function showAll() {
 		$(".online").css("display", "");
 		$(".offline").css("display", "");
 		$(".inactive").css("display", "");
 	}
 
+	/*
+	Change the channel source to get general status and info of that respective channel.
+	*/
 	function changeChannelSource(name) {
 		channelSource = channelOriginal;
 		channelSource += name + channelChange;
 	}
 
+	/*
+	Change the live source to get the live status of that respective channel.
+	*/
 	function changeLiveSource(name) {
 		source = original;
 		source += name + change;
 	}
 
 	/*
-	Channel info
+	Live status info
 	Get the information of a channel like the name, logo, URL, etc. 
 	*/
 	function getLiveInfo() {
@@ -100,7 +111,7 @@ $(document).ready(function() {
 	}
 
 	/*
-	Live status info
+	Channel info
 	Get the live status of a channel.
 	*/
 	function getChannelInfo() {
@@ -111,14 +122,15 @@ $(document).ready(function() {
 				$("#results").append("<a target='_blank' href='" + data['url'] + "''>" 
 					+ "<li class='offline'><img class='pic' src='" + data['logo'] + "' />" 
 					+ "<h2>" + data['name'] + "</h2>"
-					+ "<p>Offline</p>" + "</li></a><br>");				
+					+ "<p><strong>Current status</strong>: Offline</p>" + "</li></a><br>");				
 			},
 			error: function() {
 				$("#results").append("<li class='inactive'><img class='pic' src='https://s9.postimg.org/w8q60kdr3/inactive.gif' />" 
 					+ "<h2>" + name + "</h2>"
 					+ "<p>This account does not exist.</p>" + "</li></a><br>");
 				console.log("name is " + name);
-			}
+			},
+			async: false
 		})
 	}
 

@@ -1,4 +1,5 @@
 li {
+	margin: 5px;
 	padding: 10px;
 	list-style-type: none;
 	border: 3px solid black;
