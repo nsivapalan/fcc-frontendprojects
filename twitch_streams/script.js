@@ -3,7 +3,7 @@ $(document).ready(function() {
 								 "storbeck", "habathcx", "robotcaleb", "noobs2ninjas", "brunofin", "comster404"];
 
  	var isLive;	
-	var areLive = [];
+	var name = "";
 
 	var clientID = config.CLIENT_ID;
 
@@ -32,14 +32,44 @@ $(document).ready(function() {
 	function main() {
 
 		for (var i = 0; i < usernames.length; i++) {
-			changeLiveSource(usernames[i]);
+			name = usernames[i];
+			changeLiveSource(name);
 			getLiveInfo();
 			if (!isLive) {
-				changeChannelSource(usernames[i]);
+				changeChannelSource(name);
 				getChannelInfo();
 			}
 		}
 
+	}
+
+	$("#on").on("click", function() {
+		showAll();
+		$(".offline").css("display", "none");
+		$(".inactive").css("display", "none");
+	});
+
+	$("#off").on("click", function() {
+		showAll();
+		$(".online").css("display", "none");
+		$(".inactive").css("display", "none");
+	});
+
+	$("#na").on("click", function() {
+		showAll();
+		$(".online").css("display", "none");
+		$(".offline").css("display", "none");
+	});
+
+
+	$("#all").on("click", function() {
+		showAll();
+	});
+
+	function showAll() {
+		$(".online").css("display", "");
+		$(".offline").css("display", "");
+		$(".inactive").css("display", "");
 	}
 
 	function changeChannelSource(name) {
@@ -55,11 +85,16 @@ $(document).ready(function() {
 	function getChannelInfo() {
 		$.getJSON(channelSource, function(data) {
 			console.log(data);
-			$("#results").append("<a target='_blank' align='left' href='" + data['url'] + "''>" 
+			$("#results").append("<a target='_blank' href='" + data['url'] + "''>" 
 				+ "<li class='offline'><img class='pic' src='" + data['logo'] + "' />" 
 				+ "<h2>" + data['name'] + "</h2>"
 				+ "<p>Offline</p>" + "</li></a><br>");
 		})
+		.fail(function() {
+			$("#results").append("<li class='inactive'><img class='pic' src='https://s9.postimg.org/w8q60kdr3/inactive.gif' />" 
+				+ "<h2>" + name + "</h2>"
+				+ "<p>This account does not exist.</p>" + "</li></a><br>");
+		});
 	}
 
 	function getLiveInfo() {
@@ -67,7 +102,7 @@ $(document).ready(function() {
 			console.log(data);
 			if (data["stream"] !== null) {
 				isLive = true;
-				$("#results").append("<a target='_blank' align='left' href='" + data["stream"]["channel"]["url"] + "''>" 
+				$("#results").append("<a target='_blank' href='" + data["stream"]["channel"]["url"] + "''>" 
 					+ "<li class='online'><img class='pic' src='" + data["stream"]["channel"]["logo"] + "' />" 
 					+ "<h2>" + data["stream"]["channel"]['display_name'] + "</h2>" 
 					+ "<p><strong>Currently streaming</strong>: " + data["stream"]["channel"]['status'] 

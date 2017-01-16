@@ -1,5 +1,4 @@
 li {
-	margin: 5px;
 	padding: 10px;
 	list-style-type: none;
 	border: 3px solid black;
@@ -9,9 +8,17 @@ a:hover {
 	text-decoration: none !important;
 }
 
+ul {
+	padding: 0;
+}
+
+li:hover {
+	opacity: 0.75;
+}
+
 .pic {
 	border-radius: 50%;
-	height: 50px;
+	height: 100px;
 }
 
 .online {
