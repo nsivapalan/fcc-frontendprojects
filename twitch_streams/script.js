@@ -100,8 +100,8 @@ $(document).ready(function() {
 					$("#results").append("<a target='_blank' href='" + data["stream"]["channel"]["url"] + "''>" 
 						+ "<li class='online'><img class='pic' src='" + data["stream"]["channel"]["logo"] + "' />" 
 						+ "<h2>" + data["stream"]["channel"]['display_name'] + "</h2>" 
-						+ "<p><strong>Currently streaming</strong>: " + data["stream"]["channel"]['status'] 
-						+ "</p></li></a><br>");
+						+ "<p><em>Currently streaming</em>: <strong>" + data["stream"]["channel"]['status'] 
+						+ "</strong></p></li></a><br>");
 				} else {
 					isLive = false;
 				}
@@ -122,12 +122,12 @@ $(document).ready(function() {
 				$("#results").append("<a target='_blank' href='" + data['url'] + "''>" 
 					+ "<li class='offline'><img class='pic' src='" + data['logo'] + "' />" 
 					+ "<h2>" + data['name'] + "</h2>"
-					+ "<p><strong>Current status</strong>: Offline</p>" + "</li></a><br>");				
+					+ "<p><em>Status</em>: <strong>Offline</strong></p>" + "</li></a><br>");				
 			},
 			error: function() {
 				$("#results").append("<li class='inactive'><img class='pic' src='https://s9.postimg.org/w8q60kdr3/inactive.gif' />" 
 					+ "<h2>" + name + "</h2>"
-					+ "<p>This account does not exist.</p>" + "</li></a><br>");
+					+ "<p><em>Status</em>: <strong>This account does not exist.</strong></p>" + "</li></a><br>");
 				console.log("name is " + name);
 			},
 			async: false

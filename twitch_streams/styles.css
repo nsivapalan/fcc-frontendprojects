@@ -13,9 +13,9 @@ ul {
 	padding: 0;
 }
 
-li:hover {
-	opacity: 0.75;
-}
+	li:hover {
+		opacity: 0.75;
+	}
 
 .pic {
 	border-radius: 50%;
@@ -28,7 +28,7 @@ li:hover {
 
 .offline {
 	background: #ff6d6b;
-	color: black;
+	color: #1e1f21;
 }
 
 .inactive {
