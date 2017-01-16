@@ -1,9 +1,9 @@
 $(document).ready(function() {
 	var usernames = ["esl_sc2", "ogamingsc2", "cretetion", "freecodecamp", 
-								 "storbeck", "habathcx", "robotcaleb", "noobs2ninjas", "brunofin", "comster404"];
+								 "storbeck", "habathcx", "robotcaleb", "noobs2ninjas", "brunofin", "comster404", "lvagewgweagwg32523"];
 
  	var isLive;	
-	var name = "";
+	var name;
 
 	var clientID = config.CLIENT_ID;
 
@@ -33,6 +33,7 @@ $(document).ready(function() {
 
 		for (var i = 0; i < usernames.length; i++) {
 			name = usernames[i];
+			console.log(name);
 			changeLiveSource(name);
 			getLiveInfo();
 			if (!isLive) {
@@ -94,6 +95,7 @@ $(document).ready(function() {
 			$("#results").append("<li class='inactive'><img class='pic' src='https://s9.postimg.org/w8q60kdr3/inactive.gif' />" 
 				+ "<h2>" + name + "</h2>"
 				+ "<p>This account does not exist.</p>" + "</li></a><br>");
+			console.log("name is " + name);
 		});
 	}
 
