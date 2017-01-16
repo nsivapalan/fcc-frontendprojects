@@ -116,5 +116,3 @@ $(document).ready(function() {
 	main();
 
 });
-
-
