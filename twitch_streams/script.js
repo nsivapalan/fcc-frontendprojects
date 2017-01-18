@@ -51,6 +51,10 @@ $(document).ready(function() {
 
 		for (var i = 0; i < usernames.length; i++) {
 			name = usernames[i];
+			if (i === 5) { // halfway
+				$("div").removeClass("result");
+				$(".second").addClass("result");
+			}
 			changeLiveSource(name);
 			getLiveInfo();
 			if (!isLive) {
@@ -97,7 +101,7 @@ $(document).ready(function() {
 			success: function(data) {
 				if (data["stream"] !== null) {
 					isLive = true;
-					$("#results").append("<a target='_blank' href='" + data["stream"]["channel"]["url"] + "''>" 
+					$(".result").append("<a target='_blank' href='" + data["stream"]["channel"]["url"] + "''>" 
 						+ "<li class='online'><img class='pic' src='" + data["stream"]["channel"]["logo"] + "' />" 
 						+ "<h2>" + data["stream"]["channel"]['display_name'] + "</h2>" 
 						+ "<p><em>Currently streaming</em>: <strong>" + data["stream"]["channel"]['status'] 
@@ -119,16 +123,15 @@ $(document).ready(function() {
 			type: 'GET',
 			url: channelSource,
 			success: function(data) {
-				$("#results").append("<a target='_blank' href='" + data['url'] + "''>" 
+				$(".result").append("<a target='_blank' href='" + data['url'] + "''>" 
 					+ "<li class='offline'><img class='pic' src='" + data['logo'] + "' />" 
 					+ "<h2>" + data['name'] + "</h2>"
 					+ "<p><em>Status</em>: <strong>Offline</strong></p>" + "</li></a><br>");				
 			},
 			error: function() {
-				$("#results").append("<li class='inactive'><img class='pic' src='https://s9.postimg.org/w8q60kdr3/inactive.gif' />" 
+				$(".result").append("<li class='inactive'><img class='pic' src='https://s9.postimg.org/w8q60kdr3/inactive.gif' />" 
 					+ "<h2>" + name + "</h2>"
 					+ "<p><em>Status</em>: <strong>This account does not exist.</strong></p>" + "</li></a><br>");
-				console.log("name is " + name);
 			},
 			async: false
 		})
