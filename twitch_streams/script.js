@@ -1,8 +1,8 @@
 $(document).ready(function() {
-	var usernames = ["esl_sc2", "ogamingsc2", "cretetion", "freecodecamp", 
+	var usernames = ["esl_sc2", "ogamingsc2", "freecodecamp", "cretetion", 
 								 "storbeck", "habathcx", "robotcaleb", "noobs2ninjas", "brunofin", "comster404"];
 
- 	var isLive;	
+ 	var isLive;	// boolean, used to prevent duplicates
 	var name;
 
 	var clientID = config.CLIENT_ID;

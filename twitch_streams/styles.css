@@ -1,8 +1,16 @@
+#bg {
+	background-color: #2b2a28;
+}
+
+.text {
+	color: #edeae3;
+}
+
 li {
 	margin: 5px;
 	padding: 10px;
 	list-style-type: none;
-	border: 3px solid black;
+	border: 2px solid #d8cfb6;
 }
 
 a:hover {
@@ -11,6 +19,10 @@ a:hover {
 
 ul {
 	padding: 0;
+}
+
+li {
+	height: 240px;
 }
 
 	li:hover {
