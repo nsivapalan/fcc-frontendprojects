@@ -1,17 +1,19 @@
 $(document).ready(function() {
+	// global variables
 	var source = "http://api.openweathermap.org/data/2.5/weather";
 	var key = "c8e7fa10e9b32b58e31c0744ddbae914";
 	var tempF;
 	var tempC;
 	var isInF = true;
-
+	
+	// wallpaper image sources
 	var hot = "https://wallpaperscraft.com/image/sea_sand_sky_81899_1920x1080.jpg";
 	var warm = "https://wallpaperscraft.com/image/waterfall_trees_mountains_sky_grass_summer_87320_1920x1080.jpg";
 	var cool = "https://wallpaperscraft.com/image/mountains_sky_reflection_grass_lake_river_93232_1920x1080.jpg";
 	var cold = "https://wallpaperscraft.com/image/lake_grass_cloudy_bad_weather_despondency_mountains_52128_1920x1080.jpg";
 	var freezing = "https://wallpaperscraft.com/image/sunset_winter_trees_landscape_86143_1920x1080.jpg";
 
-	// main
+	// main function
 	$.getJSON("http://ip-api.com/json", function(pos) {
 	    var lat = pos.lat;
 	    var lon = pos.lon;
@@ -41,7 +43,7 @@ $(document).ready(function() {
 	  });
 	}
 
-	// change to F or C
+	// change to F or C on click of button
 	function change() {
 	  if (isInF) {
 	    $("#temp").html("The temperature is <strong>" + tempC + " °C</strong>");
